@@ -1,0 +1,23 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "{identifier}:{name}",
+            "materials": {
+                "default": "phantom"
+            },
+            "textures": {
+                "default": "textures/{identifier}/entity/{name}"
+            },
+            "geometry": {
+                "default": "geometry.{identifier}.{name}"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "spawn_egg": {
+                "texture": "{identifier}:{name}_spawner"
+            }
+        }
+    }
+}
