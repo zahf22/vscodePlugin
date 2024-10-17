@@ -1,4 +1,6 @@
 [
     { "value": "Rbasic", "label": "Basic Resource Template" },
-    { "value": "Radvanced", "label": "Advanced Resource Template" }
+    { "value": "Radvanced", "label": "Advanced Resource Template" },
+    { "value": "Radvanced1", "label": "Advanced1 Resource Template" },
+    { "value": "Radvanced2", "label": "Advanced2 Resource Template" }
 ]
