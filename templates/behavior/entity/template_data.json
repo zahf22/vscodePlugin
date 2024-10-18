@@ -1,6 +1,3 @@
 [
-    { "value": "deathmoth.template", "label": "Deathmoth Behavior" },
-    { "value": "Badvanced", "label": "Advanced Behavior Template" },
-    { "value": "Badvanced1", "label": "Advanced1 Behavior Template" },
-    { "value": "Badvanced2", "label": "Advanced2 Behavior Template" }
+    { "value": "deathmoth.template", "label": "Deathmoth Behavior" }
 ]
