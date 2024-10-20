@@ -93,28 +93,28 @@
       "minecraft:entity_spawned": {
         "add": {
           "component_groups": [
-            "large_version"
+            "{ENTITYIDENTIFIER}:large_version"
           ]
         }
       },
       "{ENTITYIDENTIFIER}:small_version": {
         "add": {
           "component_groups": [
-            "small_version"
+            "{ENTITYIDENTIFIER}:small_version"
           ]
         }
       },
       "{ENTITYIDENTIFIER}:add_panic": {
         "add": {
           "component_groups": [
-            "panic"
+            "{ENTITYIDENTIFIER}:panic"
           ]
         }
       },
       "{ENTITYIDENTIFIER}:remove_panic": {
         "remove": {
           "component_groups": [
-            "panic"
+            "{ENTITYIDENTIFIER}:panic"
           ]
         }
       }
