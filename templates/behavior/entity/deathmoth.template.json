@@ -3,8 +3,8 @@
   "minecraft:entity": {
     "description": {
       "identifier": "{ENTITYIDENTIFIER}:{ENTITYNAME}",
-      "is_spawnable": {ENTITYSPAWNABLE},
-      "is_summonable": {ENTITYSUMMONABLE},
+      "is_spawnable": "{ENTITYSPAWNABLE}",
+      "is_summonable": "{ENTITYSUMMONABLE}",
       "is_experimental": false
     },
     "component_groups": {
