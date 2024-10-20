@@ -2,13 +2,13 @@
   "format_version": "1.21.0",
   "minecraft:entity": {
     "description": {
-      "identifier": "{identifier}:{name}",
-      "is_spawnable": true,
-      "is_summonable": true,
+      "identifier": "{ENTITYIDENTIFIER}:{ENTITYNAME}",
+      "is_spawnable": "{ENTITYSPAWNABLE}",
+      "is_summonable": "{ENTITYSUMMONABLE}",
       "is_experimental": false
     },
     "component_groups": {
-      "{identifier}:small_version": {
+      "{ENTITYIDENTIFIER}:small_version": {
         "minecraft:movement": {
           "value": 0.2
         },
@@ -25,14 +25,15 @@
           "damage": 0
         },
         "minecraft:health": {
-          "value": 30,
-          "max": 30
+          "min": "{ENTITYHEALTHMIN}",
+          "max": "{ENTITYHEALTHMAX}",
+          "value": "{ENTITYHEALTHVALUE}"
         },
         "minecraft:scale": {
           "value": 0.5
         }
       },
-      "{identifier}:large_version": {
+      "{ENTITYIDENTIFIER}:large_version": {
         "minecraft:is_illager_captain": {},
         "minecraft:movement": {
           "value": 0.3
@@ -45,19 +46,20 @@
             {
               "max_wait_time": 1,
               "min_wait_time": 1,
-              "spawn_entity": "{identifier}:{name}",
+              "spawn_entity": "{ENTITYIDENTIFIER}:{ENTITYNAME}",
               "num_to_spawn": 2,
               "single_use": true,
-              "spawn_event": "{identifier}:small_version"
+              "spawn_event": "{ENTITYIDENTIFIER}:small_version"
             }
           ]
         },
         "minecraft:loot": {
-          "table": "loot_tables/{identifier}/{name}.json"
+          "table": "loot_tables/{ENTITYIDENTIFIER}/{ENTITYNAME}.json"
         },
         "minecraft:health": {
-          "value": 60,
-          "max": 60
+          "min": "{ENTITYHEALTHMIN}",
+          "max": "{ENTITYHEALTHMAX}",
+          "value": "{ENTITYHEALTHVALUE}"
         },
         "minecraft:attack": {
           "damage": 0
@@ -69,7 +71,7 @@
           "seat_count": 1
         }
       },
-      "{identifier}:panic": {
+      "{ENTITYIDENTIFIER}:panic": {
         "minecraft:behavior.panic": {
           "priority": 0,
           "force": true,
@@ -81,7 +83,7 @@
           "time": [3, 5],
           "looping": false,
           "time_down_event": {
-            "event": "{identifier}:remove_panic",
+            "event": "{ENTITYIDENTIFIER}:remove_panic",
             "target": "self"
           }
         }
@@ -95,21 +97,21 @@
           ]
         }
       },
-      "{identifier}:small_version": {
+      "{ENTITYIDENTIFIER}:small_version": {
         "add": {
           "component_groups": [
             "small_version"
           ]
         }
       },
-      "{identifier}:add_panic": {
+      "{ENTITYIDENTIFIER}:add_panic": {
         "add": {
           "component_groups": [
             "panic"
           ]
         }
       },
-      "{identifier}:remove_panic": {
+      "{ENTITYIDENTIFIER}:remove_panic": {
         "remove": {
           "component_groups": [
             "panic"
@@ -138,7 +140,7 @@
         "reach_multiplier": 1.4,
         "speed_multiplier": 1.4,
         "on_attack": {
-          "event": "{identifier}:add_panic",
+          "event": "{ENTITYIDENTIFIER}:add_panic",
           "target": "self"
         }
       },
@@ -157,15 +159,15 @@
         "priority": 19
       },
       "minecraft:type_family": {
-        "family": ["{identifier}", "mob", "{name}"]
+        "family": ["{ENTITYIDENTIFIER}", "mob", "{ENTITYNAME}"]
       },
       "minecraft:breathable": {
         "total_supply": 15,
         "suffocate_time": 0
       },
       "minecraft:collision_box": {
-        "width": 1,
-        "height": 1
+        "width": "{ENTITYSIZEWIDTH}",
+        "height": "{ENTITYSIZEHEIGHT}"
       },
       "minecraft:follow_range": {
         "value": 1024
