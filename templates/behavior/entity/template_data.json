@@ -1,3 +1,4 @@
 [
+    { "value": "basic_walk.template", "label": "Basic Walking Behavior" },
     { "value": "deathmoth.template", "label": "Deathmoth Behavior" }
 ]
