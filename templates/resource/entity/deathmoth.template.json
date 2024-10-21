@@ -2,21 +2,21 @@
     "format_version": "1.10.0",
     "minecraft:client_entity": {
         "description": {
-            "identifier": "{identifier}:{name}",
+            "identifier": "{ENTITYIDENTIFIER}:{ENTITYNAME}",
             "materials": {
                 "default": "phantom"
             },
             "textures": {
-                "default": "textures/{identifier}/entity/{name}"
+                "default": "textures/{ENTITYIDENTIFIER}/entity/{ENTITYNAME}"
             },
             "geometry": {
-                "default": "geometry.{identifier}.{name}"
+                "default": "geometry.{ENTITYIDENTIFIER}.{ENTITYNAME}"
             },
             "render_controllers": [
                 "controller.render.default"
             ],
             "spawn_egg": {
-                "texture": "{identifier}:{name}_spawner"
+                "texture": "spawner"
             }
         }
     }
